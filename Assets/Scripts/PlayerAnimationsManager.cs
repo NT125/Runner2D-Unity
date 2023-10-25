@@ -7,22 +7,21 @@ public class PlayerAnimationsManager : MonoBehaviour
     public Rigidbody2D playerRB;
     public Animator playerAnimator;
 
-    // Start is called before the first frame update
+    // Game Loop
     void Start()
     {
+        // Obteniendo la referencia a los componentes
         playerRB = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        Debug.Log(playerAnimator.GetBool("isJumping"));
-        Debug.Log(playerAnimator.GetBool("isFalling"));
     }
 
-    // Update is called once per frame
     void Update()
     {
         checkJump();
         checkFall();
     }
 
+    // Función que verifica si el jugador salta según la velocidad en Y de su RigidBody2D
     private void checkJump()
     {
         if (playerRB.velocity.y > 0f)
@@ -35,6 +34,7 @@ public class PlayerAnimationsManager : MonoBehaviour
         }
     }
 
+    // Función que verifica si el jugador cae según la velocidad en Y de su RigidBody2D
     private void checkFall()
     {
         if (playerRB.velocity.y < 0f)

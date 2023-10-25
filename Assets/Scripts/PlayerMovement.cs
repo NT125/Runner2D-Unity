@@ -10,13 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3f;
     private Rigidbody2D playerRB;
 
-    // Start is called before the first frame update
+    // Game Loop
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
