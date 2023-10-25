@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float jumpForce = 21f;
+    [SerializeField] private float movementSpeed = 3f;
     private Rigidbody2D playerRB;
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Move();
         Jump();
     }
 
@@ -29,12 +31,29 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Die(){
+    private void Move()
+    {
+        if (Input.GetAxisRaw("Horizontal") > 0)
+        {
+            playerRB.transform.Translate(Vector2.right * movementSpeed * Time.deltaTime);
+        }
+        else if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+            playerRB.transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
+        }
+    }
+
+    private void Die()
+    {
         Debug.Log("mori :(");
     }
 
-    void OnCollisionEnter2D(Collision2D col){
-        if(col.gameObject.CompareTag("Spike")){
+
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Spike"))
+        {
             Die();
         }
     }
