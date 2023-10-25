@@ -5781,7 +5781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageSpeed: 7
-  stageRB: {fileID: 0}
+  stageRB: {fileID: 547582867}
 --- !u!1 &1203688511
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,7 +5878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageSpeed: 7
-  stageRB: {fileID: 0}
+  stageRB: {fileID: 1349002726}
 --- !u!66 &1349002725
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -6754,6 +6754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 21
+  movementSpeed: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
