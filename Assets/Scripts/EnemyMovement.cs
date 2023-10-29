@@ -6,7 +6,11 @@ public class EnemyMovement : MonoBehaviour
 {
     
     [SerializeField] public float movementSpeed = 7f;
-    private Rigidbody2D enemyRB;
+    [SerializeField] private Rigidbody2D enemyRB;
+
+    void Start(){
+        enemyRB = GetComponent<Rigidbody2D>();
+    }
 
     // Update is called once per frame
     void Update()
