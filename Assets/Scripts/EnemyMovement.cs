@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    
+
     [SerializeField] public float movementSpeed = 7f;
     [SerializeField] private Rigidbody2D enemyRB;
 
-    void Start(){
+    void Start()
+    {
         enemyRB = GetComponent<Rigidbody2D>();
     }
 
@@ -16,9 +17,19 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Move();
+        Delete();
     }
 
-    private void Move(){
+    private void Move()
+    {
         enemyRB.transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
+    }
+
+    private void Delete()
+    {
+        if (enemyRB.transform.position.x <= -11f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
