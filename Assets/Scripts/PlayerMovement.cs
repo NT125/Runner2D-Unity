@@ -41,19 +41,4 @@ public class PlayerMovement : MonoBehaviour
             playerRB.transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
         }
     }
-
-    private void Die()
-    {
-        Debug.Log("mori :(");
-    }
-
-
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Spike"))
-        {
-            Die();
-        }
-    }
 }
