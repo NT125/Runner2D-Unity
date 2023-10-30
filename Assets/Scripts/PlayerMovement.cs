@@ -41,4 +41,12 @@ public class PlayerMovement : MonoBehaviour
             playerRB.transform.Translate(Vector2.left * movementSpeed * Time.deltaTime);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Spike"))
+        {
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 11f);
+        }
+    }
 }
