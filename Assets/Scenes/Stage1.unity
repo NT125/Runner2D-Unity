@@ -6175,7 +6175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb4fc85ce8c1644960fe90a712cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageSpeed: 7
+  stageSpeed: 5.5
   stageRB: {fileID: 547582867}
 --- !u!1 &807010523
 GameObject:
@@ -6429,7 +6429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb4fc85ce8c1644960fe90a712cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageSpeed: 7
+  stageSpeed: 5.5
   stageRB: {fileID: 1218526126}
 --- !u!61 &1218526124
 BoxCollider2D:
@@ -6485,7 +6485,7 @@ Transform:
   m_GameObject: {fileID: 1218526121}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 220.8, y: -17.48, z: 6.0631866}
+  m_LocalPosition: {x: 220.8, y: -31.5, z: 6.0631866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6567,7 +6567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eefb4fc85ce8c1644960fe90a712cb42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageSpeed: 7
+  stageSpeed: 5.5
   stageRB: {fileID: 1349002726}
 --- !u!66 &1349002725
 CompositeCollider2D:
@@ -6656,18 +6656,6 @@ CompositeCollider2D:
         Y: -20000000
       - X: 1140000000
         Y: -20000000
-    - - X: 1320000000
-        Y: -23750000
-      - X: 1317500032
-        Y: -20000000
-      - X: 1313750016
-        Y: -20000000
-      - X: 1310000000
-        Y: -25625000
-      - X: 1310000000
-        Y: -30000000
-      - X: 1320000000
-        Y: -30000000
     - - X: 1690000000
         Y: -23750000
       - X: 1687500032
@@ -6747,18 +6735,6 @@ CompositeCollider2D:
       - X: 790000000
         Y: -30000000
       - X: 820000000
-        Y: -30000000
-    - - X: 1080000000
-        Y: -23750000
-      - X: 1077500032
-        Y: -20000000
-      - X: 1073750016
-        Y: -20000000
-      - X: 1070000000
-        Y: -25625000
-      - X: 1070000000
-        Y: -30000000
-      - X: 1080000000
         Y: -30000000
     - - X: 1450000000
         Y: -23750000
@@ -6846,18 +6822,6 @@ CompositeCollider2D:
       - {x: 144.37498, y: -2.000012}
       - {x: 144, y: -2.5625079}
       - {x: 144.00003, y: -3}
-    - - {x: 131.99997, y: -3}
-      - {x: 132, y: -2.3749936}
-      - {x: 131.74998, y: -2}
-      - {x: 131.37498, y: -2.000012}
-      - {x: 131, y: -2.5625079}
-      - {x: 131.00003, y: -3}
-    - - {x: 107.99998, y: -3}
-      - {x: 108, y: -2.3749936}
-      - {x: 107.74999, y: -2}
-      - {x: 107.37499, y: -2.000012}
-      - {x: 107, y: -2.5625079}
-      - {x: 107.00003, y: -3}
     - - {x: 81.99997, y: -3}
       - {x: 81.99999, y: -2.3749936}
       - {x: 81.74999, y: -2}
@@ -7087,26 +7051,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 107, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 131, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 144, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -7191,15 +7135,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 17
+  - m_RefCount: 15
     m_Data: {fileID: 11400000, guid: 6e2209cc4920faf498d3c44fd98bbce7, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 17
+  - m_RefCount: 15
     m_Data: {fileID: 1480277807, guid: b40f8338a38c01c43b0dc403bc366a81, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 17
+  - m_RefCount: 15
     m_Data:
       e00: 1
       e01: 0
@@ -7218,7 +7162,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 17
+  - m_RefCount: 15
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
