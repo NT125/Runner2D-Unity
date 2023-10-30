@@ -6,6 +6,7 @@ public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth = 3;
     public int playerHealth;
+    public GameObject gameOverScreen;
     private bool isInvincible = false; // Booleano que servirá para darle un segundo de invulnerabilidad al jugador tras recibir daño
     
 
@@ -27,6 +28,15 @@ public class PlayerHealthManager : MonoBehaviour
     private void TakeDamage()
     {
         playerHealth--;
+
+        Debug.Log(playerHealth <= 0);
+
+        if(playerHealth <= 0){
+            Debug.Log("Hola");
+            gameOverScreen.GetComponent<GameOverScreen>().ShowGameOverScreen();
+            Destroy(gameObject);
+        }
+        
 
         Debug.Log("Vidas: " + playerHealth);
     }
