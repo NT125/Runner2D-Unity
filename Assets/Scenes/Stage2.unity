@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 547582866}
   - component: {fileID: 547582869}
   m_Layer: 0
-  m_Name: Level1Map
+  m_Name: Level2Map
   m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7732,7 +7732,7 @@ GameObject:
   - component: {fileID: 1349002725}
   - component: {fileID: 1349002724}
   m_Layer: 0
-  m_Name: Level1Spikes
+  m_Name: Level2Spikes
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
