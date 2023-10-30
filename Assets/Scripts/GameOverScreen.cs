@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
@@ -15,5 +16,9 @@ public class GameOverScreen : MonoBehaviour
     public void ShowGameOverScreen()
     {
         gameObject.SetActive(true);
+    }
+
+    public void Restart(){
+        SceneManager.LoadScene("Stage1");
     }
 }
