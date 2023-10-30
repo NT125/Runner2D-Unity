@@ -15,10 +15,15 @@ public class GameOverScreen : MonoBehaviour
     // Método para activar la pantalla
     public void ShowGameOverScreen()
     {
-        gameObject.SetActive(true);
+        gameObject.SetActive(true); // Se activa la pantalla al morir
     }
 
+    // Métodos para los botones
     public void Restart(){
         SceneManager.LoadScene("Stage1");
+    }
+
+    public void MainMenu(){
+        SceneManager.LoadScene("MainMenu");
     }
 }
