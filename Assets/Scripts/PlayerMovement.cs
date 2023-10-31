@@ -10,13 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3f;
     private Rigidbody2D playerRB;
 
-    // Start is called before the first frame update
+    // Game Loop
     void Start()
     {
         playerRB = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Move();
@@ -43,18 +42,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void Die()
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("mori :(");
-    }
-
-
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.CompareTag("Spike"))
+        if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Spike"))
         {
-            Die();
+            playerRB.velocity = new Vector2(playerRB.velocity.x, 11f);
         }
     }
 }
