@@ -655,8 +655,8 @@ GameObject:
   - component: {fileID: 547582865}
   - component: {fileID: 547582864}
   - component: {fileID: 547582868}
-  - component: {fileID: 547582867}
   - component: {fileID: 547582866}
+  - component: {fileID: 547582867}
   - component: {fileID: 547582869}
   m_Layer: 0
   m_Name: Level3Map
@@ -9372,7 +9372,7 @@ CompositeCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547582862}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

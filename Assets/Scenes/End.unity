@@ -256,6 +256,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371556133}
   m_CullTransparentMesh: 1
+--- !u!95 &458966338 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2224679794918138245, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+  m_PrefabInstance: {fileID: 1573404726}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &458966340 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1510036426217024269, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+  m_PrefabInstance: {fileID: 1573404726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &481262868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1495,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 805386473719561569, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: playerRB
+      value: 
+      objectReference: {fileID: 458966340}
+    - target: {fileID: 805386473719561569, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 458966338}
     - target: {fileID: 2103228768841039356, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
       propertyPath: m_Name
       value: Player

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-    public GameObject player;
-
     void Start()
     {
         gameObject.SetActive(false); // La pantalla inicia desactivada

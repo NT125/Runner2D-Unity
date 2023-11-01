@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738679997648328353, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
+      propertyPath: stageRB
+      value: 
+      objectReference: {fileID: 547582867}
     - target: {fileID: 7072796713405948591, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
       propertyPath: m_Name
       value: EnemyTrigger_3
@@ -391,6 +395,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738679997648328353, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
+      propertyPath: stageRB
+      value: 
+      objectReference: {fileID: 547582867}
     - target: {fileID: 7072796713405948591, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
       propertyPath: m_Name
       value: EnemyTrigger_1
@@ -7423,6 +7431,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738679997648328353, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
+      propertyPath: stageRB
+      value: 
+      objectReference: {fileID: 547582867}
     - target: {fileID: 7072796713405948591, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
       propertyPath: m_Name
       value: EnemyTrigger_2
@@ -8827,7 +8839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f4e11c0f232ce49be64a2a3a05ac00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 2144263794}
 --- !u!114 &1406537909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9115,6 +9127,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633941358}
   m_CullTransparentMesh: 1
+--- !u!1 &2144263794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2103228768841039356, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+  m_PrefabInstance: {fileID: 8859107659651744200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3978390375119519936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9163,6 +9180,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4738679997648328353, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
+      propertyPath: stageRB
+      value: 
+      objectReference: {fileID: 547582867}
     - target: {fileID: 7072796713405948591, guid: 36598c7abb26d444e8e15db59dc0a351, type: 3}
       propertyPath: m_Name
       value: EnemyTrigger
