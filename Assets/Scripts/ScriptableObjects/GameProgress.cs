@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class TankData : ScriptableObject
+public class GameProgress : ScriptableObject
 {
-   public int health;
-
+    public int metres;
 }

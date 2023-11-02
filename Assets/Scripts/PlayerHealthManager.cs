@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth = 3;
-    public int playerHealth;
+    public TankData tankData; // Scriptable Obj
     public GameObject gameOverScreen;
     private bool isInvincible = false; // Booleano que servirá para darle un segundo de invulnerabilidad al jugador tras recibir daño
-    
+
 
     void Start()
     {
-        playerHealth = maxHealth; // Definiendo la salud del jugador al máximo según maxHealth
+        if (SceneManager.GetActiveScene().name == "Stage1")
+        {
+            tankData.health = maxHealth; // Iniciando el primer nivel con vida máxima
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -27,18 +31,19 @@ public class PlayerHealthManager : MonoBehaviour
     // Función para recibir daño
     private void TakeDamage()
     {
-        playerHealth--;
+        tankData.health--;
 
-        Debug.Log(playerHealth <= 0);
+        Debug.Log(tankData.health <= 0);
 
-        if(playerHealth <= 0){
+        if (tankData.health <= 0)
+        {
             Debug.Log("Hola");
             gameOverScreen.GetComponent<GameOverScreen>().ShowGameOverScreen();
             Destroy(gameObject);
         }
-        
 
-        Debug.Log("Vidas: " + playerHealth);
+
+        Debug.Log("Vidas: " + tankData.health);
     }
 
     // Función para otorgarle invencibilidad al jugador. Recibe daño y se vuelve invencible por 1 seg, luego deja de ser invencible
