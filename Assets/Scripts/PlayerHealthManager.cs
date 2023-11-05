@@ -9,13 +9,31 @@ public class PlayerHealthManager : MonoBehaviour
     public TankData tankData; // Scriptable Obj
     public GameObject gameOverScreen;
     private bool isInvincible = false; // Booleano que servirá para darle un segundo de invulnerabilidad al jugador tras recibir daño
+    private GameObject player;
 
+    //Declarando sprites para modificar el contador de vidas del HUD
+    public SpriteRenderer healthUI_SR;
+    public Sprite health3Sprite; public Sprite health2Sprite; public Sprite health1Sprite; public Sprite health0Sprite;
 
     void Start()
     {
+        healthUI_SR.sprite = health3Sprite;
+        player = gameObject.GetComponent<GameObject>();
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
             tankData.health = maxHealth; // Iniciando el primer nivel con vida máxima
+        }
+    }
+
+    void Update()
+    {
+        switch(tankData.health){
+            case 2:
+                healthUI_SR.sprite = health2Sprite; break;
+            case 1:
+                healthUI_SR.sprite = health1Sprite; break;
+            default:
+                healthUI_SR.sprite = health3Sprite; break;
         }
     }
 
@@ -37,7 +55,7 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (tankData.health <= 0)
         {
-            Debug.Log("Hola");
+            healthUI_SR.sprite = health0Sprite;
             gameOverScreen.GetComponent<GameOverScreen>().ShowGameOverScreen();
             Destroy(gameObject);
         }

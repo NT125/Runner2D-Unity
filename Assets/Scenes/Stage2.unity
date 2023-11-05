@@ -9475,6 +9475,26 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: fe3633e013e47a44b8315247927fb091, type: 2}
     - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: healthUI_SR
+      value: 
+      objectReference: {fileID: 1163087332}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health0Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86c20cd01ad169a4aa17d3893b85c5fc, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d4966b6188f4d754a99d0295093c644c, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 370f4f4dba7cb19448b00b5397ac2795, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health3Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c5c22e456cda7c4b896a17edca2db2c, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1406537907}
