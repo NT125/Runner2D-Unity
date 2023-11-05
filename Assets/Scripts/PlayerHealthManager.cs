@@ -51,8 +51,6 @@ public class PlayerHealthManager : MonoBehaviour
     {
         tankData.health--;
 
-        Debug.Log(tankData.health <= 0);
-
         if (tankData.health <= 0)
         {
             healthUI_SR.sprite = health0Sprite;
@@ -60,8 +58,6 @@ public class PlayerHealthManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-
-        Debug.Log("Vidas: " + tankData.health);
     }
 
     // Función para otorgarle invencibilidad al jugador. Recibe daño y se vuelve invencible por 1 seg, luego deja de ser invencible
