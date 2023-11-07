@@ -10,9 +10,9 @@
 
 
 ## Objetivo del juego
-**El objetivo del jugador es sortear una difícil pista de obstáculos sin ser destruido en el recorrido**
+**El objetivo del jugador es sortear una difícil pista de obstáculos sin ser destruido en el recorrido.**
 
-El jugador controla un tanque inofensivo en una pista de obstáculos separada en 3 secciones, cada sección es más dificil que la anterior. Puede moverse de izquierda pulsando <kbd>←</kbd> y <kbd>→</kbd>, y puede saltar pulsando <kbd>Space</kbd>.
+El jugador controla un tanque inofensivo en una pista de obstáculos separada en 3 secciones, cada sección es más dificil que la anterior. Puede moverse de izquierda a derecha pulsando <kbd>←</kbd> y <kbd>→</kbd>, y puede saltar pulsando <kbd>Space</kbd>.
 
 El tanque que controla el jugador soportará hasta 3 golpes antes de ser destruido, se puede observar la salud restante en el medidor que se muestra en la parte inferior izquierda de la pantalla.
 
