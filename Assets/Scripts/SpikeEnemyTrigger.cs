@@ -14,8 +14,6 @@ public class SpikeEnemyTrigger : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             StartCoroutine(LaunchAlert());
-            Debug.Log("Hay colisión");
-            //Vector2 spawnLocation = transform.position + Vector3.left * offset; // Creando un punto de spawn, "offset" unidades a la derecha
             Invoke("SpawnEnemy", 0.7f);
         }
     }
