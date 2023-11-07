@@ -9,7 +9,7 @@ public class PlayerHealthManager : MonoBehaviour
     public TankData tankData; // Scriptable Obj
     public GameObject gameOverScreen;
     private bool isInvincible = false; // Booleano que servirá para darle un segundo de invulnerabilidad al jugador tras recibir daño
-    private GameObject player;
+    private SpriteRenderer playerSprite;
 
     //Declarando sprites para modificar el contador de vidas del HUD
     public SpriteRenderer healthUI_SR;
@@ -18,7 +18,7 @@ public class PlayerHealthManager : MonoBehaviour
     void Start()
     {
         healthUI_SR.sprite = health3Sprite;
-        player = gameObject.GetComponent<GameObject>();
+        playerSprite = gameObject.GetComponent<SpriteRenderer>();
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
             tankData.health = maxHealth; // Iniciando el primer nivel con vida máxima
@@ -27,7 +27,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     void Update()
     {
-        switch(tankData.health){
+        switch (tankData.health)
+        {
             case 2:
                 healthUI_SR.sprite = health2Sprite; break;
             case 1:
@@ -43,6 +44,7 @@ public class PlayerHealthManager : MonoBehaviour
         {
             TakeDamage();
             StartCoroutine(Invincibility());
+            StartCoroutine(InvincibilityFX());
         }
     }
 
@@ -63,9 +65,16 @@ public class PlayerHealthManager : MonoBehaviour
     // Función para otorgarle invencibilidad al jugador. Recibe daño y se vuelve invencible por 1 seg, luego deja de ser invencible
     IEnumerator Invincibility()
     {
-
         isInvincible = true;
         yield return new WaitForSeconds(1f);
         isInvincible = false;
+    }
+
+    // Corrutina para dar un efecto que indique que es invulnerable por un momento al recibir daño
+    IEnumerator InvincibilityFX()
+    {
+        playerSprite.color = new Color(1f, 0.5f, 0.5f, 0.8f); // Seteando un color semi-transparente
+        yield return new WaitForSeconds(1f);
+        playerSprite.color = Color.white;
     }
 }

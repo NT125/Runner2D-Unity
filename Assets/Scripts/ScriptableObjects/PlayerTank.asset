@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5341835d2e00e4847a50b3eb9d29343c, type: 3}
   m_Name: PlayerTank
   m_EditorClassIdentifier: 
-  jumpForce: 21
-  movementSpeed: 3
-  lives: 3
+  health: 0
