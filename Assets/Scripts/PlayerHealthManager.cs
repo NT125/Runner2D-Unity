@@ -9,6 +9,7 @@ public class PlayerHealthManager : MonoBehaviour
     public TankData tankData; // Scriptable Obj
     public GameObject gameOverScreen;
     private bool isInvincible = false; // Booleano que servirá para darle un segundo de invulnerabilidad al jugador tras recibir daño
+    private Transform playerTransform;
     private SpriteRenderer playerSprite;
 
     //Declarando sprites para modificar el contador de vidas del HUD
@@ -18,6 +19,7 @@ public class PlayerHealthManager : MonoBehaviour
     void Start()
     {
         healthUI_SR.sprite = health3Sprite;
+        playerTransform = gameObject.GetComponent<Transform>();
         playerSprite = gameObject.GetComponent<SpriteRenderer>();
         if (SceneManager.GetActiveScene().name == "Stage1")
         {
@@ -36,6 +38,7 @@ public class PlayerHealthManager : MonoBehaviour
             default:
                 healthUI_SR.sprite = health3Sprite; break;
         }
+        CheckOutOfBounds();
     }
 
     private void OnCollisionEnter2D(Collision2D col)
@@ -55,10 +58,24 @@ public class PlayerHealthManager : MonoBehaviour
 
         if (tankData.health <= 0)
         {
-            healthUI_SR.sprite = health0Sprite;
-            gameOverScreen.GetComponent<GameOverScreen>().ShowGameOverScreen();
-            Destroy(gameObject);
+            KillPlayer();
         }
+
+    }
+
+    private void CheckOutOfBounds()
+    {
+        if (playerTransform.position.x <= -16f)
+        {
+            KillPlayer();
+        }
+    }
+
+    private void KillPlayer()
+    {
+        healthUI_SR.sprite = health0Sprite;
+        gameOverScreen.GetComponent<GameOverScreen>().ShowGameOverScreen();
+        Destroy(gameObject);
 
     }
 
