@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 21f;
     [SerializeField] private float movementSpeed = 3f;
     private Rigidbody2D playerRB;
+    private bool isOnGround;
 
     // Game Loop
     void Start()
@@ -24,9 +25,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isOnGround)
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+            isOnGround = false;
         }
     }
 
@@ -44,9 +46,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D col)
     {
+        // Chequeando colisión con objetos dañinos
         if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Spike"))
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, 11f);
+        }
+
+        // Chequeando colisión con el suelo
+        if (col.gameObject.CompareTag("Map"))
+        {
+            isOnGround = true;
         }
     }
 }

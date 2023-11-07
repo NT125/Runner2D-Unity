@@ -26,9 +26,6 @@ public class GameProgressManager : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log(gameProgress.metres);
-        Debug.Log("Este Log debería ejecutarse");
-
         progressTMP.text = "Metros Recorridos: " + gameProgress.metres.ToString() + "m";
 
         if (SceneManager.GetActiveScene().name == "End"){

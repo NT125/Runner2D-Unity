@@ -7252,8 +7252,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Reiniciar
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
+  m_sharedMaterial: {fileID: 7925793164564859092, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7283,7 +7283,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -7386,8 +7386,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\xA1Has muerto!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
+  m_sharedMaterial: {fileID: 7925793164564859092, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7411,13 +7411,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.4
+  m_fontSize: 41.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -8983,8 +8983,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Volver al men\xFA"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
+  m_sharedMaterial: {fileID: 7925793164564859092, guid: 786989b2a3f039f4a9e059072191be38, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9008,13 +9008,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.05
+  m_fontSize: 20.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -9474,6 +9474,26 @@ PrefabInstance:
       propertyPath: tankData
       value: 
       objectReference: {fileID: 11400000, guid: fe3633e013e47a44b8315247927fb091, type: 2}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: healthUI_SR
+      value: 
+      objectReference: {fileID: 1163087332}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health0Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86c20cd01ad169a4aa17d3893b85c5fc, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health1Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d4966b6188f4d754a99d0295093c644c, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health2Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 370f4f4dba7cb19448b00b5397ac2795, type: 3}
+    - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
+      propertyPath: health3Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c5c22e456cda7c4b896a17edca2db2c, type: 3}
     - target: {fileID: 3741238232896087036, guid: 0d146fc0e74c7fa489a375008241b8ed, type: 3}
       propertyPath: gameOverScreen
       value: 
