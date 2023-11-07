@@ -10,10 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3f;
     private Rigidbody2D playerRB;
     private bool isOnGround;
+    public AudioSource[] playerAS; // Para obtener un array que contenga los AudioSources del objeto
 
     // Game Loop
     void Start()
     {
+        playerAS = GetComponents<AudioSource>();
         playerRB = GetComponent<Rigidbody2D>();
     }
 
@@ -28,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isOnGround)
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, jumpForce);
+            playerAS[0].Play();
             isOnGround = false;
         }
     }
@@ -50,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         if (col.gameObject.CompareTag("Enemy") || col.gameObject.CompareTag("Spike"))
         {
             playerRB.velocity = new Vector2(playerRB.velocity.x, 11f);
+            playerAS[1].Play();
         }
 
         // Chequeando colisión con el suelo

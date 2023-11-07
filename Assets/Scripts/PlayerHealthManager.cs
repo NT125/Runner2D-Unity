@@ -15,9 +15,11 @@ public class PlayerHealthManager : MonoBehaviour
     //Declarando sprites para modificar el contador de vidas del HUD
     public SpriteRenderer healthUI_SR;
     public Sprite health3Sprite; public Sprite health2Sprite; public Sprite health1Sprite; public Sprite health0Sprite;
+    public AudioSource[] playerAS; // Para obtener un array que contenga los AudioSources del objeto
 
     void Start()
     {
+        playerAS = GetComponents<AudioSource>();
         healthUI_SR.sprite = health3Sprite;
         playerTransform = gameObject.GetComponent<Transform>();
         playerSprite = gameObject.GetComponent<SpriteRenderer>();
@@ -54,6 +56,7 @@ public class PlayerHealthManager : MonoBehaviour
     // Función para recibir daño
     private void TakeDamage()
     {
+        playerAS[2].Play();
         tankData.health--;
 
         if (tankData.health <= 0)
